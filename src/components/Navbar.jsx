@@ -133,8 +133,8 @@ export const Navbar = ({ isLogged, userData, logOutCallback }) => {
             </DropdownMenu>
           ) : (
             <div className="animated-responsive justify-end flex-1 hidden lg:flex space-x-2">
-              <RegisterButton onClick={toggleRegistration} outline={true} />
-              <LoginButton onClick={toggleLogin} outline={true} />
+              <RegisterButton  outline={true} />
+              <LoginButton  outline={true} />
             </div>
           )}
           <div className="animated-responsive flex flex-1 md:flex-none lg:flex-1 w-fit justify-end lg:hidden">

@@ -7,8 +7,8 @@ export const RegisterButton = ({ onClick, outline }) => {
       variant={outline ? "outline" : ""}
       className={
         outline
-          ? "select-none border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white"
-          : "select-none bg-purple-600 hover:bg-purple-700 text-white"
+          ? "select-none border-grey text-grey hover:bg-grey hover:text-grey"
+          : "select-none bg-purple-600 hover:bg-grey text-grey"
       }
       onClick={onClick}
     >
@@ -23,8 +23,8 @@ export const LoginButton = ({ onClick, outline }) => {
       variant={outline ? "outline" : ""}
       className={
         outline
-          ? "select-none border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white"
-          : "select-none bg-purple-600 hover:bg-purple-700 text-white"
+          ? "select-none border-grey text-grey hover:bg-grey hover:text-grey"
+          : "select-none bg-grey hover:bg-grey text-grey"
       }
       onClick={onClick}
     >

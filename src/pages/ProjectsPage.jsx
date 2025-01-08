@@ -42,43 +42,6 @@ export const ProjectsPage = ({ tokenSesion }) => {
     projectId: -1
   })
 
-  useEffect(() => {
-    async function getProjects() {
-      const result = await ProjectsController.asyncGetProjects();
-      if (result.successful) {
-        setProjects(result.data.projects);
-      }
-      else {
-        alert(result.details)
-      }
-    }
-
-    async function joinProject() {
-      const result = await ProjectsController.asyncJoinProject(tokenSesion,joinProjectRequest.projectId);
-
-      if (result.successful) {
-        alert("Se sumó exitosamente al proyecto.")
-      }
-      else {
-        alert(result.details)
-      }
-
-      setJoinProjectRequest({
-        requested: false,
-        projectId: -1
-      })
-    }
-
-    if (joinProjectRequest.requested) {
-      joinProject()
-    }
-
-    if(!projectsFetched){
-      getProjects();
-      setProjectsFetched(true);
-    }
-  }, [joinProjectRequest])
-
   const filteredProjects = (rawProjects) => {
     let result = rawProjects;
 
@@ -154,7 +117,7 @@ export const ProjectsPage = ({ tokenSesion }) => {
           className="flex w-auto -ml-6"
           columnClassName="pl-6 bg-clip-padding"
         >
-          {filteredProjects(Proyectos2024json).map((projects) => (
+          {filteredProjects([...Proyectos2024json.proyectos]).map((projects) => (
             <motion.div key={projects.id} variants={item} className="mb-6">
               <ProjectBox data={projects} onJoinCallback={()=>{
                 setJoinProjectRequest({
@@ -172,7 +135,7 @@ export const ProjectsPage = ({ tokenSesion }) => {
           className="flex w-auto -ml-6"
           columnClassName="pl-6 bg-clip-padding"
         >
-          {filteredProjects(Proyectos2023json.proyectos).map((project) => (
+          {filteredProjects([...Proyectos2023json.proyectos]).map((project) => (
             <motion.div key={project.id} variants={item} className="mb-6">
               <ProjectBox data={project} onJoinCallback={()=>{
                 setJoinProjectRequest({

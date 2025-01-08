@@ -47,12 +47,12 @@
     {
       "id": 3,
       "titulo": "MachMed",
-      "descripcion": "",
+      "descripcion": "Plataforma para donar y solicitar medicamentos.",
       "url_proyecto": "https://github.com/Fiore20023/machMed",
       "url_pagina": "",
       "estado": "en_desarrollo",
       "abierto": "false",
-      "tecnologias": [],
+      "tecnologias": ["HTML","CSS","JS"],
       "participantes": [{
         "nombre": "Fiorella",
         "apellido": "Gagliardi",

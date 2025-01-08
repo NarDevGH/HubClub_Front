@@ -40,23 +40,6 @@ export const ParticipantsPage = () => {
   const [selectedUser, setSelectedUser] = useState(null);
   const [participantsFetched, setParticipantsFetched] = useState(false);
   
-  useEffect(()=>{
-    async function getParticipants(){
-      const result = await ParticipantsController.asyncGetAllParticipants();        
-      if(result.successful){
-        setParticipants(result.participants);
-      }
-      else{
-        alert(result.details);
-      }
-    }
-
-    if(!participantsFetched){
-      getParticipants();
-      setParticipantsFetched(true);
-    }
-  },[])
-
   const filteredParticipants = () => {
     let res = Participantes2024json.miembros;
     if (search !== "") {
