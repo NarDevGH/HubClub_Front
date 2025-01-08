@@ -8,7 +8,7 @@
       "url_pagina": "http://club-desarrolladores.site/",
       "estado": "en_desarrollo",
       "abierto": "true",
-      "tecnologias": ["HTML", "CSS", "React"],
+      "tecnologias": ["HTML", "CSS", "React", "nodejs", "tailwind", "shadcn/ui", "mysql"],
       "participantes": [
         {
         "nombre": "Federico",
